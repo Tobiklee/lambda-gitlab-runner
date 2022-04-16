@@ -6,7 +6,7 @@ const {
 
 const cdkVersion = '2.20.0';
 
-const project = new awscdk.AwsCdkTypeScriptApp({
+const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion,
   defaultReleaseBranch: 'master',
   name: 'lambda-gitlab-runner',

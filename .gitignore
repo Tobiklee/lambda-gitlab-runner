@@ -43,14 +43,11 @@ junit.xml
 !/.github/workflows/upgrade-master.yml
 !/.github/pull_request_template.md
 !/test/
-!/tsconfig.json
 !/tsconfig.dev.json
 !/src/
 /lib
 /dist/
 !/.eslintrc.json
-/assets/
-!/cdk.json
-/cdk.out/
-.cdk.staging/
-.parcel-cache/
+.jsii
+tsconfig.json
+!/API.md
