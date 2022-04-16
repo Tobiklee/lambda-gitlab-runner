@@ -64,14 +64,11 @@
   "keywords": [
     "cdk",
     "constructs",
-    "dynamo",
-    "gateway",
+    "executor",
+    "gitlab",
     "lambda",
-    "microservice",
-    "quirion",
-    "serverless",
-    "swagger",
-    "website"
+    "runner",
+    "serverless"
   ],
   "license": "Apache-2.0",
   "version": "0.0.0",
