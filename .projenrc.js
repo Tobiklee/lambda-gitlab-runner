@@ -47,7 +47,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '.idea',
   ],
 });
-project.addTask('preinstall', {
-  exec: 'mkdir -p ./lib/executor && cp ./src/executor/*.Dockerfile $_',
+project.addTask('postinstall', {
+  exec: 'ls -la && mkdir -p lib/executor && cp src/executor/*.Dockerfile $_',
 });
 project.synth();

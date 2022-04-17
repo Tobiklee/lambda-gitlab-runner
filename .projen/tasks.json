@@ -170,17 +170,17 @@
       "name": "post-upgrade",
       "description": "Runs after upgrading dependencies"
     },
+    "postinstall": {
+      "name": "postinstall",
+      "steps": [
+        {
+          "exec": "ls -la && mkdir -p lib/executor && cp src/executor/*.Dockerfile $_"
+        }
+      ]
+    },
     "pre-compile": {
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
-    },
-    "preinstall": {
-      "name": "preinstall",
-      "steps": [
-        {
-          "exec": "mkdir -p ./lib/executor && cp ./src/executor/*.Dockerfile $_"
-        }
-      ]
     },
     "release": {
       "name": "release",
