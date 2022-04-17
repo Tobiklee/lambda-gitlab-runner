@@ -43,9 +43,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   gitignore: [
     '.idea',
   ],
-
-  deps: [
-    `@aws-cdk/aws-lambda-go-alpha@${cdkVersion}-alpha.0`,
-  ],
+});
+project.addTask('preinstall', {
+  exec: 'npm install -g pnpm',
 });
 project.synth();
