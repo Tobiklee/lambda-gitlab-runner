@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@aws-cdk/aws-lambda-go-alpha': 2.20.0-alpha.0
   '@types/jest': ^27.4.1
   '@types/node': ^12
   '@typescript-eslint/eslint-plugin': ^5
@@ -23,6 +24,9 @@ specifiers:
   standard-version: ^9
   ts-jest: ^27.1.4
   typescript: ^4.6.3
+
+dependencies:
+  '@aws-cdk/aws-lambda-go-alpha': 2.20.0-alpha.0_71369cf158a4792389e60848355e2455
 
 devDependencies:
   '@types/jest': 27.4.1
@@ -56,6 +60,17 @@ packages:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.4
     dev: true
+
+  /@aws-cdk/aws-lambda-go-alpha/2.20.0-alpha.0_71369cf158a4792389e60848355e2455:
+    resolution: {integrity: sha512-MvXYL9SpxvQ3vD3TMDzUT5ov+K06p4gGGU5FVhUg3Doi3x7P+71nJ82ElkNo8T2jUBu0bPPuOQvTNJLTTskmDQ==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      aws-cdk-lib: ^2.20.0
+      constructs: ^10.0.0
+    dependencies:
+      aws-cdk-lib: 2.20.0_constructs@10.0.5
+      constructs: 10.0.5
+    dev: false
 
   /@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==}

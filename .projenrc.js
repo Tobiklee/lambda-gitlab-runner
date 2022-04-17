@@ -35,7 +35,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
 
   cdkVersionPinning: false,
 
-  releaseToNpm: false,
+  releaseToNpm: true,
   release: {
     releaseEveryCommit: true,
   },
@@ -44,9 +44,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '.idea',
   ],
 
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  deps: [
+    `@aws-cdk/aws-lambda-go-alpha@${cdkVersion}-alpha.0`,
+  ],
 });
 project.synth();
