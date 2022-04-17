@@ -117,9 +117,22 @@ const lambdaRunnerConfiguration: LambdaRunnerConfiguration = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#lambda-gitlab-runner.LambdaRunnerConfiguration.property.dockerFile">dockerFile</a></code> | <code><a href="#lambda-gitlab-runner.DockerFile">DockerFile</a></code> | Select a default docker file. |
 | <code><a href="#lambda-gitlab-runner.LambdaRunnerConfiguration.property.functionProps">functionProps</a></code> | <code>aws-cdk-lib.aws_lambda.DockerImageFunctionProps</code> | Additional function props. Overwrite defaults. |
 | <code><a href="#lambda-gitlab-runner.LambdaRunnerConfiguration.property.gitlabUrl">gitlabUrl</a></code> | <code>string</code> | Gitlab - Url  from gitlab installation. |
 | <code><a href="#lambda-gitlab-runner.LambdaRunnerConfiguration.property.runnerToken">runnerToken</a></code> | <code>string</code> | Runner token needed connect to gitlab instance. |
+
+---
+
+##### `dockerFile`<sup>Optional</sup> <a name="dockerFile" id="lambda-gitlab-runner.LambdaRunnerConfiguration.property.dockerFile"></a>
+
+```typescript
+public readonly dockerFile: DockerFile;
+```
+
+- *Type:* <a href="#lambda-gitlab-runner.DockerFile">DockerFile</a>
+
+Select a default docker file.
 
 ---
 
@@ -174,4 +187,22 @@ Is only used if --context runner-token is undefined.
 ---
 
 
+
+## Enums <a name="Enums" id="Enums"></a>
+
+### DockerFile <a name="DockerFile" id="lambda-gitlab-runner.DockerFile"></a>
+
+Selection of premade docker files.
+
+#### Members <a name="Members" id="Members"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#lambda-gitlab-runner.DockerFile.NODE_14">NODE_14</a></code> | *No description.* |
+
+---
+
+##### `NODE_14` <a name="NODE_14" id="lambda-gitlab-runner.DockerFile.NODE_14"></a>
+
+---
 

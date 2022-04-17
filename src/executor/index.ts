@@ -3,6 +3,13 @@ import { DockerImageCode, DockerImageFunction } from 'aws-cdk-lib/aws-lambda';
 import { DockerImageFunctionProps } from 'aws-cdk-lib/aws-lambda/lib/image-function';
 import { Construct } from 'constructs';
 
+/**
+ * Selection of premade docker files
+ */
+export enum DockerFile {
+  NODE_14 = 'node14.Dockerfile'
+}
+
 export interface LambdaRunnerConfiguration {
   /**
    * Gitlab - Url  from gitlab installation.
@@ -18,6 +25,11 @@ export interface LambdaRunnerConfiguration {
    * Is only used if --context runner-token is undefined.
    */
   readonly runnerToken?: string;
+
+  /**
+   * Select a default docker file.
+   */
+  readonly dockerFile?: DockerFile;
 
   /**
    * Additional function props. Overwrite defaults.
@@ -41,7 +53,7 @@ export class LambdaRunner extends Construct {
 
     new DockerImageFunction(this, 'LambdaGitlabExecutor', {
       functionName: 'LambdaGitlabExecutor',
-      code: DockerImageCode.fromImageAsset(path.join(__dirname)),
+      code: DockerImageCode.fromImageAsset(path.join(__dirname), { file: props?.dockerFile ?? DockerFile.NODE_14 }),
       memorySize: 4096,
       ...props?.functionProps,
       environment: {
