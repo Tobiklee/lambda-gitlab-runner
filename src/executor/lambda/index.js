@@ -17,7 +17,7 @@ function execute(cmd) {
 }
 
 /**
- * Executes gitlab-runner single run
+ * Executes gitlab-runner single run.
  */
 export const handler = async () => {
   const gitlabUrl = process.env.GITLAB_URL;

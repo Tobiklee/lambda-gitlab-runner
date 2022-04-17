@@ -62,6 +62,5 @@ export class LambdaRunner extends Construct {
         ...props?.functionProps?.environment,
       },
     });
-
   }
 }

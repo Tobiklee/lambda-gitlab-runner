@@ -1,4 +1,7 @@
-const { awscdk } = require('projen');
+const {
+  awscdk,
+  Task,
+} = require('projen');
 const {
   NodePackageManager,
   NpmAccess,
@@ -43,5 +46,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   gitignore: [
     '.idea',
   ],
+});
+project.addTask('preinstall', {
+  exec: 'mkdir -p ./lib/executor && cp ./src/executor/*.Dockerfile $_',
 });
 project.synth();
