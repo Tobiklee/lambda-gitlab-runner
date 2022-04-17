@@ -30,7 +30,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'executor',
   ],
 
-  packageManager: NodePackageManager.PNPM,
+  packageManager: NodePackageManager.NPM,
   npmAccess: NpmAccess.PUBLIC,
 
   cdkVersionPinning: false,
@@ -43,8 +43,5 @@ const project = new awscdk.AwsCdkConstructLibrary({
   gitignore: [
     '.idea',
   ],
-});
-project.addTask('preinstall', {
-  exec: 'npm install -g pnpm',
 });
 project.synth();

@@ -174,14 +174,6 @@
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
     },
-    "preinstall": {
-      "name": "preinstall",
-      "steps": [
-        {
-          "exec": "npm install -g pnpm"
-        }
-      ]
-    },
     "release": {
       "name": "release",
       "description": "Prepare a release from \"master\" branch",
@@ -260,7 +252,7 @@
       },
       "steps": [
         {
-          "exec": "pnpm update npm-check-updates"
+          "exec": "npm update npm-check-updates"
         },
         {
           "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='aws-cdk-lib,constructs'"
@@ -278,10 +270,10 @@
           "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='aws-cdk-lib,constructs'"
         },
         {
-          "exec": "pnpm i"
+          "exec": "npm install"
         },
         {
-          "exec": "pnpm update"
+          "exec": "npm update"
         },
         {
           "exec": "npx projen"
