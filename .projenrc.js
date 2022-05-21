@@ -48,6 +48,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   ],
 });
 project.addTask('postinstall', {
-  exec: 'ls -la && mkdir -p lib/executor && cp src/executor/*.Dockerfile $_',
+  exec: 'ls -la && mkdir -p lib/executor && cp src/executor/*.Dockerfile lib/executor',
 });
 project.synth();

@@ -46,7 +46,7 @@
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.26.0",
-    "jest": "^27.5.1",
+    "jest": "^27",
     "jest-junit": "^13",
     "jsii": "^1.56.0",
     "jsii-diff": "^1.56.0",
@@ -56,7 +56,7 @@
     "npm-check-updates": "^12",
     "projen": "^0.54.28",
     "standard-version": "^9",
-    "ts-jest": "^27.1.4",
+    "ts-jest": "^27",
     "typescript": "^4.6.3"
   },
   "peerDependencies": {
